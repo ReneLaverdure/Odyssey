@@ -1,0 +1,64 @@
+// COLOR VARIABLES
+$color-primary: #241c2e;
+$color-secondary: #f39898e0;
+$color-third: #332944;
+
+$color-font: rgb(248, 196, 196);
+
+$color-white: #fff;
+
+@font-face {
+  src: url(../fonts/brotherhood.ttf);
+  font-family: hood;
+}
+
+// RESPONSIVE BREAKPOINTS
+$bp-largest: 87.5em; //1400px
+$bp-large-2: 75em;   // 1200px
+$bp-large: 62.5em;   // 1000px
+$bp-900: 56.25em;   //900px
+$bp-medium: 50em;    // 800px;
+$bp-medium: 50em;    // 800px;
+$bp-small: 37.5em;    // 600px;
+
+
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%; // 10px/16px = 62.5 ->1rem = 10px
+  font-family: 'Sarabun', sans-serif;
+
+    @media only screen and (max-width: $bp-largest) {
+      font-size: 50%;
+  }
+
+    @media only screen and (max-width: $bp-large-2) {
+      font-size: 40%;
+  }
+}
+
+body {
+  color: $color-font;
+  background-color: $color-primary; 
+}
+
+.container  {
+  display: grid;
+  grid-template-rows: 6rem calc(100vh - 10rem) 4rem  repeat(6, min-content);
+
+
+  // & > * {
+  //   font-size: 3rem;
+  // }
+
+}
+
+

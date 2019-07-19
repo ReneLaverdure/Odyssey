@@ -1,0 +1,147 @@
+.hero {
+  grid-column: 1 / -1;
+  grid-row: 2 / 3;
+  font-size: 4.5rem;
+  background-image: linear-gradient(rgba($color-primary, 0.5), rgba($color-primary, 0.5)), url(../img/hero.jpg);
+  background-size: cover;
+  background-position: center;
+
+  display: flex;
+  flex-direction: column;
+
+  &__text {
+    margin: auto;
+    text-align: center; 
+    animation: moveInBottom 0.6s ease-out .1s;
+    
+    p {
+      font-size: 2rem;
+      letter-spacing: 1rem;
+    }
+
+    h1 {
+      font-size: 18rem;
+      font-weight: bold;
+      letter-spacing: 4rem;
+      font-family: hood;
+      transform: rotateY(30deg);
+    }
+  }
+
+  &__icon {
+    list-style: none;
+    margin: 1rem auto;
+    text-align: center;
+    font-size: 3.5rem;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    li {
+      margin: 0 3rem;
+
+      a {
+        color: $color-font;
+        padding: 1.5rem;
+
+      }
+
+      a:hover,
+      a:active {
+       color: rgb(224, 224, 224);
+       background-color: $color-secondary;
+     }
+
+    }
+  }
+}
+
+
+.bar {
+  grid-column: 1 / -1;
+  grid-row: 3 / 4;
+  font-size: 1.2rem;
+  background-color: $color-secondary;
+  text-transform: uppercase;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  &__items {
+    display: flex;
+    list-style: none;
+    align-items: center;
+    justify-content: center;
+    color: $color-primary;
+
+    li {
+      letter-spacing: .5rem;
+      margin: 0 2.5rem;
+    }
+  }
+}
+
+
+.story-section {
+  grid-column: 1 / -1;
+  grid-row: 4 / 5;
+  margin: 0rem 8rem;
+  margin-top: 5rem;
+  font-size: 2.5rem;
+  color: white;
+}
+
+.about-section {
+  grid-column: 1 / -1;
+  grid-row: 5 / 6;
+  margin: 8rem 0;
+}
+
+.main-section {
+  grid-row: 6 / 7;
+  margin: 10rem 25rem;
+  padding-bottom: 10rem;
+  font-size: 2.5rem;
+  border-bottom: 1px solid pink;
+
+  @media only screen and (max-width: $bp-900) {
+    margin: 10rem 10rem;
+    margin-top: 35rem;
+  }
+}
+
+.blog-section {
+  grid-row: 7 / 8;
+
+  margin: 5rem auto;
+  width: 100%;
+  padding: 6rem;
+  font-size: 1.5rem;
+  padding-bottom: 12rem;
+  border-bottom: 1px solid pink;
+}
+
+.insta {
+  grid-column: 1 / -1;
+  grid-row: 8 / 9;
+  text-align: center;
+  letter-spacing: .3rem;
+  h2 {
+    font-size: 2.5rem
+  }
+  h4 {
+    font-size: 1.5rem;
+  }
+  img {
+    margin-top: 2rem;
+  }
+}
+
+
+
+
+
+
+

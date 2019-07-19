@@ -1,0 +1,175 @@
+.navbar {
+  grid-column: 1 / -1;
+  grid-row: 1 / 2;
+
+  background: $color-primary; 
+  text-align: center;
+  position: fixed;
+  z-index: 999;
+  width: 100%;
+  padding: 2rem 1rem;
+  border-bottom: 1px solid $color-secondary;
+
+  &__logo {
+    font-size: 2.5rem;
+    text-align: left;
+    margin-left: 4rem;
+    font-family: hood;
+    letter-spacing: .5rem;
+
+    display: flex;
+    
+
+    h1 {
+      margin-left: 3rem;
+      margin-top: 2rem;
+      font-size: 4rem;
+    }
+  }
+
+  &__toggle {
+    display: none;
+
+    &--label {
+      position: absolute;
+      top: 0;
+      right: 0;
+      margin-right: 6rem;
+      height: 100%;
+      display: flex;
+      align-items: center;
+    }
+
+    &--label span,
+    &--label span::before,
+    &--label span::after {
+    display: block;
+    background: rgb(255, 255, 255);
+    height: 1px;
+    width: 2em;
+    border-radius: 2px;
+    position: relative;
+    }
+
+    &--label span::before,
+    &--label span::after {
+      content: '';
+      position: absolute;
+    }
+
+    &--label span::before {
+      bottom: 5px;
+    }
+
+    &--label span::after {
+      top: 5px;
+    }
+
+    &:checked ~ .navbar__menu {
+      transform: scale(1,1);
+    }
+
+    &:checked ~ .navbar__menu a {
+      opacity: 1;
+      transition: opacity .25s ease-in-out .25s;
+    }
+  }
+
+  &__menu {
+    position: absolute;
+    text-align: left;
+    top: 100%;
+    left: 0;
+    background: $color-primary; 
+    width: 100%;
+
+    transform: scale(1, 0);
+    transform-origin: top;
+    transition: transform .4s ease-in-out;
+  }
+
+  &__list {
+    margin:0;
+    padding: 0;
+    list-style: none;
+
+    &--item {
+      margin-bottom: 1.5rem;
+      margin-left: 1.5rem;
+      padding: 1.5rem 1rem;
+      text-align: center;
+
+      a {
+        color: white;
+        text-decoration: none;
+        font-size: 2rem;
+        text-transform: uppercase;
+
+        opacity: 0;
+        transition: all .15s ease-in-out 
+      }
+
+      &:hover {
+        background-color: $color-secondary;
+      }
+
+    }
+  }
+  
+}
+
+@media screen and (min-width: 800px) {
+  .navbar__toggle--label {
+    display: none;
+  }
+
+  .navbar {
+    display: grid;
+    grid-template-columns:  auto 1fr minmax(600px, 4fr) 1fr;
+    padding: 0;
+    // padding-top: 1rem;
+    // padding-bottom: 1rem;
+
+    &__logo {
+      grid-column:  2 / span 1;
+      margin-bottom: 1rem;
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+
+  
+   
+    }
+
+    &__menu {
+      all: unset;
+ 
+      margin:0;
+      padding: 0;
+      list-style: none;
+      grid-column: 3 / 4;
+    }
+
+    &__list {
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      
+
+      &--item {
+        margin-bottom: 0;
+        margin-top: 2rem;
+        margin-right: 3rem;
+        align-self: center;
+
+        a {
+          opacity: 1;
+          position: relative;
+        }
+      }
+    }
+
+  }
+
+
+}
