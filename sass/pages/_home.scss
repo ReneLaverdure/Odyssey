@@ -1,10 +1,14 @@
 .hero {
   grid-column: 1 / -1;
   grid-row: 2 / 3;
+  height: 100vh;
+  margin-top: -10rem;
   font-size: 4.5rem;
   background-image: linear-gradient(rgba($color-primary, 0.5), rgba($color-primary, 0.5)), url(../img/hero.jpg);
   background-size: cover;
+  background-repeat: no-repeat;
   background-position: center;
+  overflow: hidden;
 
   display: flex;
   flex-direction: column;
@@ -25,6 +29,10 @@
       letter-spacing: 4rem;
       font-family: hood;
       transform: rotateY(30deg);
+
+      @media only screen and (max-width: $bp-small) {
+        font-size: 12rem;
+      }
     }
   }
 
@@ -33,6 +41,11 @@
     margin: 1rem auto;
     text-align: center;
     font-size: 3.5rem;
+    width: 80%;
+
+    // @media only screen and (max-width: $bp-x-small) {
+    //   font-size: 12rem;
+    // }
 
     display: flex;
     align-items: center;
@@ -44,7 +57,7 @@
       a {
         color: $color-font;
         padding: 1.5rem;
-
+        text-decoration: none;
       }
 
       a:hover,

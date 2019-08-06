@@ -61,18 +61,18 @@ body {
     display: block;
     background-color: white; }
   .db-line:hover, .db-line:active {
-    background-color: #f39898e0; }
+    background-color: #f39898; }
 
 .navbar {
-  grid-column: 1 / -1;
-  grid-row: 1 / 2;
+  position: absolute;
+  top: 0;
   background: #241c2e;
   text-align: center;
   position: fixed;
   z-index: 999;
   width: 100%;
   padding: 2rem 1rem;
-  border-bottom: 1px solid #f39898e0; }
+  border-bottom: 1px solid #f39898; }
   .navbar__logo {
     font-size: 2.5rem;
     text-align: left;
@@ -89,7 +89,7 @@ body {
     .navbar__toggle--label {
       position: absolute;
       top: 0;
-      right: 0;
+      right: 5rem;
       margin-right: 6rem;
       height: 100%;
       display: flex;
@@ -99,8 +99,8 @@ body {
     .navbar__toggle--label span::after {
       display: block;
       background: white;
-      height: 1px;
-      width: 2em;
+      height: 2px;
+      width: 3em;
       border-radius: 2px;
       position: relative; }
     .navbar__toggle--label span::before,
@@ -143,7 +143,7 @@ body {
         opacity: 0;
         transition: all .15s ease-in-out; }
       .navbar__list--item:hover {
-        background-color: #f39898e0; }
+        background-color: #f39898; }
 
 @media screen and (min-width: 800px) {
   .navbar__toggle--label {
@@ -383,12 +383,12 @@ body {
           padding: 1.2rem 1.6rem; }
         .main__footer-list--item i:hover {
           background-color: #f1f1f1;
-          color: #f39898e0; }
+          color: #f39898; }
 
 .gallery {
   grid-row: 9 / 10;
   grid-column: 1 / -1;
-  background-color: #f39898e0;
+  background-color: #f39898;
   margin-top: 5rem;
   padding: 2rem;
   display: grid;
@@ -435,10 +435,14 @@ body {
 .hero {
   grid-column: 1 / -1;
   grid-row: 2 / 3;
+  height: 100vh;
+  margin-top: -10rem;
   font-size: 4.5rem;
   background-image: linear-gradient(rgba(36, 28, 46, 0.5), rgba(36, 28, 46, 0.5)), url(../img/hero.jpg);
   background-size: cover;
+  background-repeat: no-repeat;
   background-position: center;
+  overflow: hidden;
   display: flex;
   flex-direction: column; }
   .hero__text {
@@ -454,11 +458,15 @@ body {
       letter-spacing: 4rem;
       font-family: hood;
       transform: rotateY(30deg); }
+      @media only screen and (max-width: 37.5em) {
+        .hero__text h1 {
+          font-size: 12rem; } }
   .hero__icon {
     list-style: none;
     margin: 1rem auto;
     text-align: center;
     font-size: 3.5rem;
+    width: 80%;
     display: flex;
     align-items: center;
     justify-content: center; }
@@ -466,17 +474,18 @@ body {
       margin: 0 3rem; }
       .hero__icon li a {
         color: #f8c4c4;
-        padding: 1.5rem; }
+        padding: 1.5rem;
+        text-decoration: none; }
       .hero__icon li a:hover,
       .hero__icon li a:active {
         color: #e0e0e0;
-        background-color: #f39898e0; }
+        background-color: #f39898; }
 
 .bar {
   grid-column: 1 / -1;
   grid-row: 3 / 4;
   font-size: 1.2rem;
-  background-color: #f39898e0;
+  background-color: #f39898;
   text-transform: uppercase;
   display: flex;
   align-items: center;
