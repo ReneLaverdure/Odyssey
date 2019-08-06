@@ -17,12 +17,12 @@
 
     @media only screen and (max-width: $bp-900) {
       width: 80%;
-      // margin: 1.5rem 3rem;
+      margin: 1.5rem 3rem;
 }
 
 
     &:not(:last-child) {
-      margin-right: 4rem;
+      margin-right: 3rem;
         @media only screen and (max-width: $bp-900) {
             margin-right: none;
       }

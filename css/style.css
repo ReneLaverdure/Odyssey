@@ -232,9 +232,10 @@ body {
     width: 33.333334%; }
     @media only screen and (max-width: 56.25em) {
       .story__card {
-        width: 80%; } }
+        width: 80%;
+        margin: 1.5rem 3rem; } }
     .story__card:not(:last-child) {
-      margin-right: 4rem; }
+      margin-right: 3rem; }
       @media only screen and (max-width: 56.25em) {
         .story__card:not(:last-child) {
           margin-right: none; } }
@@ -448,7 +449,7 @@ body {
   flex-direction: column; }
   @media only screen and (max-width: 37.5em) {
     .hero {
-      margin-top: 0; } }
+      margin-top: 5rem; } }
   .hero__text {
     margin: auto;
     text-align: center;
@@ -464,7 +465,7 @@ body {
       transform: rotateY(30deg); }
       @media only screen and (max-width: 37.5em) {
         .hero__text h1 {
-          font-size: 12rem; } }
+          font-size: 15rem; } }
   .hero__icon {
     list-style: none;
     margin: 1rem auto;
